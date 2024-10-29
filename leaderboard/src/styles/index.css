@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.leader-board {
+    overflow-y: auto;
+    overflow-x: hidden;
+    --title-bar-height: 60px;
+}
+
+.leader-board > .title-bar {
+    --elem-size: var(--title-bar-height);
+    height: calc(var(--elem-size) + 20px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    position: fixed;
+    padding-top: 20px;
+    background-color: white;
+    z-index: 10;
+}
+
+.leader-board > .title-bar > .icon {
+    width: var(--elem-size);
+    height: var(--elem-size);
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+.leader-board > .title-bar > h1 {
+    margin-left: 0px;
+    margin-right: auto;
+}
+
+.leader-board > .participants {
+    width: 50dvw;
+    height: fit-content;
+    margin: auto;
+    margin-top: calc(var(--title-bar-height) + 40px);
+}
+
+.leader-board > .participants > .participant {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 60px;
+    border: 1px solid lightgray;
+    margin: 10px 0px;
+    border-radius: 8px;
+    padding: 0px 10px;
+    transition-duration: .3s;
+}
+.leader-board > .participants > .participant:hover {
+    transform: scale(1.03);
+    box-shadow: 1px 5px 5px lightgray;
+}
+
+.leader-board > .participants > .participant > .name {
+    flex-basis: 50%;
+}
+
+.leader-board > .participants > .participant > .score {
+    flex-basis: 10%;
+    text-align: center;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+}
+
+.leader-board > .participants > .participant > .group {
+    flex-basis: 40%;
+    text-align: center;
+}
+
