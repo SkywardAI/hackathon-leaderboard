@@ -10,41 +10,47 @@ div {
 .leader-board {
     overflow-y: auto;
     overflow-x: hidden;
-    --title-bar-height: 60px;
+    --title-bar-height: 160px;
+    --row-length: 50dvw;
 }
 
-.leader-board > .title-bar {
-    --elem-size: var(--title-bar-height);
-    height: calc(var(--elem-size) + 20px);
+.leader-board > .fixed-title {
     width: 100%;
+    height: var(--title-bar-height);
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+}
+
+.leader-board > .fixed-title > .title-bar {
+    --elem-size: 60px;
+    height: fit-content;
     display: flex;
     align-items: center;
     user-select: none;
-    position: fixed;
-    padding-top: 20px;
-    background-color: white;
-    z-index: 10;
+    margin-top: 20px;
 }
 
-.leader-board > .title-bar > .icon {
+.leader-board > .fixed-title > .title-bar > .icon {
     width: var(--elem-size);
     height: var(--elem-size);
     margin-right: 20px;
     margin-left: auto;
 }
 
-.leader-board > .title-bar > h1 {
+.leader-board > .fixed-title > .title-bar > h1 {
     margin-left: 0px;
     margin-right: auto;
 }
 
 .leader-board > .participants {
-    width: 50dvw;
+    width: var(--row-length);
     height: fit-content;
     margin: auto;
-    margin-top: calc(var(--title-bar-height) + 40px);
+    margin-top: calc(var(--title-bar-height) + 10px);
 }
 
+.leader-board > .fixed-title > .column-title-container > .column-title,
 .leader-board > .participants > .participant {
     display: flex;
     width: 100%;
@@ -56,24 +62,71 @@ div {
     padding: 0px 10px;
     transition-duration: .3s;
 }
+
+.leader-board > .fixed-title > .column-title-container {
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+
+.leader-board > .fixed-title > .column-title-container > .column-title {
+    width: var(--row-length);
+    margin: auto;
+    margin-top: 15px;
+    height: 40px;
+    font-weight: bold;
+    border: unset;
+}
+
 .leader-board > .participants > .participant:hover {
     transform: scale(1.03);
     box-shadow: 1px 5px 5px lightgray;
 }
-
+.leader-board > .fixed-title > .column-title-container > .column-title > .name,
 .leader-board > .participants > .participant > .name {
     flex-basis: 50%;
+    overflow: hidden;
 }
 
+.leader-board > .fixed-title > .column-title-container > .column-title > .score,
 .leader-board > .participants > .participant > .score {
     flex-basis: 10%;
     text-align: center;
     border-right: 1px solid lightgray;
     border-left: 1px solid lightgray;
+    overflow: hidden;
 }
 
+.leader-board > .fixed-title > .column-title-container > .column-title > .group,
 .leader-board > .participants > .participant > .group {
     flex-basis: 40%;
     text-align: center;
+    overflow: hidden;
 }
 
+@media screen and (max-width: 765px) {
+    .leader-board {
+        --title-bar-height: 135px;
+        --row-length: calc(100dvw - 20px);
+    }
+
+    .leader-board > .fixed-title > .title-bar > h1 {
+        display: none;
+    }
+
+    .leader-board > .fixed-title > .title-bar > .icon {
+        margin-right: auto;
+    }
+
+    .leader-board > .participants > .participant:hover {
+        transform: unset;
+        box-shadow: unset;
+        background-color: rgba(230, 230, 230, 0.5);
+    }
+
+    .leader-board > .fixed-title > .column-title-container > .column-title > .name,
+    .leader-board > .participants > .participant > .name { flex-basis: 45%; }
+    .leader-board > .fixed-title > .column-title-container > .column-title > .score,
+    .leader-board > .participants > .participant > .score { flex-basis: 20%; }
+    .leader-board > .fixed-title > .column-title-container > .column-title > .group,
+    .leader-board > .participants > .participant > .group { flex-basis: 35%; }
+}
