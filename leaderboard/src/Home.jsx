@@ -19,7 +19,7 @@ export default function Home() {
             <div className="fixed-title">
                 <div className="title-bar">
                     <img src="/RMIT.jpg" className="icon" draggable={false} />
-                    <h1>RMIT Hackthon Leaderboard</h1>
+                    <h1>RMIT Hackathon Leaderboard</h1>
                 </div>
                 <div className="column-title-container">
                     <div className="column-title">
@@ -41,6 +41,10 @@ export default function Home() {
                     )
                 })
             }
+            </div>
+            <div className="declaimer">
+                <div className="copyright">2024 &copy; SkywardAI</div>
+                <div>This leaderboard doesn't represent the final score. Scores are not updated at real time. The final right of interpretation belongs to SkywardAI and RMIT University.</div>
             </div>
         </div>
     )
