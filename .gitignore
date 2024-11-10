@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+hackathon-converted-md/*
+rmit-gen-ai-and-cyber-security-hackathon/*

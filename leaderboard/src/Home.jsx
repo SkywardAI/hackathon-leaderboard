@@ -23,20 +23,20 @@ export default function Home() {
                 </div>
                 <div className="column-title-container">
                     <div className="column-title">
-                        <div className="name">Participant Name</div>
+                        <div className="name">Group Name</div>
                         <div className="score">Score</div>
-                        <div className="group">Group Name</div>
+                        <div className="group">Campus</div>
                     </div>
                 </div>
             </div>
             <div className="participants">
             {
-                leaders.map(({name, score, group}, index)=>{
+                leaders.map(({name, score, campus}, index)=>{
                     return (
                         <div className="participant" key={`leader-${index}`}>
                             <div className="name" title={name}>{name}</div>
                             <div className="score" title={score}>{score}</div>
-                            <div className="group" title={group}>{group}</div>
+                            <div className="group" title={campus}>{campus}</div>
                         </div>
                     )
                 })
