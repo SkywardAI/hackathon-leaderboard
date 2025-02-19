@@ -5,7 +5,7 @@ The code for the paper [Automated Leaderboard System for Hackathon Evaluation Us
 # Architecture
 
 <figure>
-  <img src="./imgs/image.png" alt="Architecture Diagram" style="width:70%;">
+  <img src="./imgs/image.png" alt="Architecture Diagram" style="width:70%; display: block; margin-left: auto; margin-right: auto;">
   <figcaption>Overview of the system architecture illustrating the processing pipeline of the Jupyter notebook submissions, from initial raw data intake to the final predicted results.</figcaption>
 </figure>
 
@@ -13,7 +13,7 @@ The code for the paper [Automated Leaderboard System for Hackathon Evaluation Us
 # Results
 
 <figure>
-  <img src="./imgs/Bland-Altman.png" alt="Bland Altman" style="width:70%;">
+  <img src="./imgs/Bland-Altman.png" alt="Bland Altman" style="width:70%; display: block; margin-left: auto; margin-right: auto;">
   <figcaption>Bland-Altman analysis [22] table reveals a mean difference (bias) of 27.5 points—meaning the LLM scores are, on average, 27.5 points higher than the technical scores and representing roughly 6.9% of the maximum technical score. The 95% limits of agreement (–6.83 to 61.83) indicate that most differences fall within a 68.66-point range, which aligns with typical inter-rater variability in manual grading and supports the reliability of our hybrid evaluation approach.</figcaption>
 </figure>
 
@@ -51,5 +51,13 @@ node mark.js
 # Citation
 
 ```bibtex
-
+@software{Li_Automated_Leaderboard_System_2025,
+author = {Li, Bowen and Cheng, Bohan and Talyor, Patrick and Osborne, Dale and Han, Fengling and Shen, Robert and Gondal, Iqbal},
+doi = {<>},
+month = mar,
+title = {{Automated Leaderboard System for Hackathon Evaluation Using Large Language Models}},
+url = {https://github.com/SkywardAI/hackathon-leaderboard},
+version = {1.0.0},
+year = {2025}
+}
 ```
