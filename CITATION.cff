@@ -6,8 +6,18 @@ authors:
     orcid: "https://orcid.org/0009-0007-6470-5607"
   - family-names: "Cheng"
     given-names: "Bohan"
+  - family-names: "Talyor"
+    given-names: "Patrick"
+  - family-names: "Osborne"
+    given-names: "Dale"
+  - family-names: "Han"
+    given-names: "Fengling"
+  - family-names: "Shen"
+    given-names: "Robert"
+  - family-names: "Gondal"
+    given-names: "Iqbal"
 title: "Automated Leaderboard System for Hackathon Evaluation Using Large Language Models"
 version: 1.0.0
 doi: <>
-date-released: 2024-12-08
+date-released: 2025-3-08
 url: "https://github.com/SkywardAI/hackathon-leaderboard"
